@@ -35,6 +35,11 @@ module.exports = {
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
       },
+      colors:{
+        purple: "#6347b7",
+        hoverPurple: "#7d5edb",
+        purpleButton: "#7f56d9",
+      }
     },
   },
   plugins: [
