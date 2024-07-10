@@ -7,6 +7,7 @@ import {
   BoltIcon,
   DocumentChartBarIcon,
 } from "@heroicons/react/24/outline";
+import Stats from "@/components/landing/Stats";
 
 const integrations = [
   {
@@ -99,6 +100,7 @@ export default function Home() {
         }
         arrow={"Learn more"}
       />
+      <Stats />
     </>
   );
 }
