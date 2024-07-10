@@ -9,6 +9,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Stats from "@/components/landing/Stats";
 import FAQ from "@/components/landing/FAQ";
+import CTA from "@/components/landing/CTA";
 
 const integrations = [
   {
@@ -103,6 +104,27 @@ export default function Home() {
       />
       <Stats />
       <FAQ />
+      <CTA
+        title={<span>Give us a shot.</span>}
+        desc={"Join over 4,000+ startups already growing with Untitled."}
+        img={
+          "https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+        }
+        bg="bg-purple"
+      />
+      <CTA
+        title={
+          <span>
+            No long-term contracts. <br />
+            No catches.
+          </span>
+        }
+        desc={"Start your 30-day free trial today."}
+        img={
+          "https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+        }
+        bg="bg-transparent"
+      />
     </>
   );
 }
