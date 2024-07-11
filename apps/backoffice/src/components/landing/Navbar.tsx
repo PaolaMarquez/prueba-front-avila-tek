@@ -8,6 +8,7 @@ import {
   ChevronDownIcon,
 } from "@heroicons/react/24/outline";
 import { Button } from "@avila-tek/ui/button";
+import MenuItem from "./MenuItem";
 
 const navigation = [
   { name: "Home", href: "#" },
@@ -62,16 +63,9 @@ export default function Navbar() {
               </button>
             </div>
             <div className="hidden px-12 lg:flex lg:gap-x-10">
-              {navigation.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="flex text-sm font-normal leading-6 text-gray-900 gap-x-2"
-                >
-                  {item.name}
-                  {item.icon}
-                </a>
-              ))}
+              {navigation.map((item, i) => {
+                return <MenuItem name={item.name} />;
+              })}
             </div>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-2">
