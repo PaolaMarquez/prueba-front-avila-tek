@@ -12,6 +12,7 @@ import FAQ from "@/components/landing/FAQ";
 import CTA from "@/components/landing/CTA";
 import Gallery from "@/components/landing/Gallery";
 import Collage from "@/components/landing/Gallery";
+import Testimonials from "@/components/landing/Testimonials";
 
 const integrations = [
   {
@@ -85,7 +86,6 @@ const features = [
 export default function Home() {
   return (
     <>
-      <Navbar />
       <Card
         features={integrations}
         info={"Integrations"}
@@ -125,6 +125,7 @@ export default function Home() {
         gallery={<Gallery />}
         bg="bg-transparent items-center"
       />
+      <Testimonials />
     </>
   );
 }
