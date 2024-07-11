@@ -10,6 +10,8 @@ import {
 import Stats from "@/components/landing/Stats";
 import FAQ from "@/components/landing/FAQ";
 import CTA from "@/components/landing/CTA";
+import Gallery from "@/components/landing/Gallery";
+import Collage from "@/components/landing/Gallery";
 
 const integrations = [
   {
@@ -120,10 +122,8 @@ export default function Home() {
           </span>
         }
         desc={"Start your 30-day free trial today."}
-        img={
-          "https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-        }
-        bg="bg-transparent"
+        gallery={<Gallery />}
+        bg="bg-transparent items-center"
       />
     </>
   );

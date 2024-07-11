@@ -1,16 +1,18 @@
 import { Button } from "@avila-tek/ui/button";
+import Gallery from "./Gallery";
 
-interface props {
+interface Props {
   title: JSX.Element;
+  gallery?: JSX.Element;
   desc: string;
-  img: string;
+  img?: string;
   bg: string;
 }
 
-export default function CTA({ title, desc, img, bg }: props) {
-  const isLight = bg === "bg-transparent";
+export default function CTA({ title, desc, img, bg, gallery }: Props) {
+  const isLight = bg.includes("bg-transparent");
   return (
-    <div className="bg-white">
+    <div className={isLight ? "bg-slate-50" : "bg-white"}>
       <div className="mx-auto max-w-[76rem] py-24 sm:px-6 sm:py-32 lg:px-8">
         <div
           className={`${bg} pl-6 pt-16 sm:rounded-3xl sm:pl-10 md:pt-24 lg:flex lg:justify-between lg:gap-x-10 lg:pl-16 lg:pt-0`}
@@ -37,11 +39,15 @@ export default function CTA({ title, desc, img, bg }: props) {
               />
             </div>
           </div>
-          <img
-            alt="App screenshot"
-            src={img}
-            className="w-[30rem] max-w-none rounded-r-3xl bg-white/5 ring-1 ring-white/10"
-          />
+          {img && (
+            <img
+              alt="App screenshot"
+              src={img}
+              className="w-[30rem] max-w-none rounded-r-3xl bg-white/5 ring-1 ring-white/10"
+            />
+          )}
+          {gallery}
+          {/* <Gallery /> */}
         </div>
       </div>
     </div>
