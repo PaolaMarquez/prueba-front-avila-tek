@@ -54,6 +54,7 @@ export default function Slide() {
         {options.map((s, i) => {
           return (
             <StarIcon
+              key={i}
               className={`w-4 ${s < stars ? "text-yellow-300" : "bg-transparent"}`}
             />
           );

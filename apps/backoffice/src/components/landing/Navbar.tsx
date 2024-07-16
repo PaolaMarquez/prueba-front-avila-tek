@@ -64,7 +64,7 @@ export default function Navbar() {
             </div>
             <div className="hidden px-12 lg:flex lg:gap-x-10">
               {navigation.map((item, i) => {
-                return <MenuItem name={item.name} />;
+                return <MenuItem key={i} name={item.name} />;
               })}
             </div>
           </div>

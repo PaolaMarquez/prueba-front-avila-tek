@@ -15,6 +15,7 @@ import Collage from "@/components/landing/Gallery";
 import Testimonials from "@/components/landing/Testimonials";
 import Slide from "@/components/landing/Slide";
 import Footer from "@/components/landing/Footer";
+import Chart from "@/components/landing/charts/Chart";
 
 const integrations = [
   {
@@ -88,6 +89,7 @@ const features = [
 export default function Home() {
   return (
     <>
+      <Chart />
       <Card
         features={integrations}
         info={"Integrations"}
