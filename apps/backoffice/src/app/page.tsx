@@ -13,6 +13,7 @@ import CTA from "@/components/landing/CTA";
 import Gallery from "@/components/landing/Gallery";
 import Collage from "@/components/landing/Gallery";
 import Testimonials from "@/components/landing/Testimonials";
+import Slide from "@/components/landing/Slide";
 
 const integrations = [
   {
@@ -126,6 +127,7 @@ export default function Home() {
         bg="bg-transparent items-center"
       />
       <Testimonials />
+      <Slide />
     </>
   );
 }
