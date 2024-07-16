@@ -48,6 +48,14 @@ export default function DoughnutChart() {
       }}
       options={{
         responsive: true,
+        layout: {
+          padding: {
+            top: 0, // Padding superior
+            right: 22, // Padding derecho
+            bottom: 30, // Padding inferior
+            left: 0, // Padding izquierdo
+          },
+        },
         plugins: {
           legend: {
             display: false,
