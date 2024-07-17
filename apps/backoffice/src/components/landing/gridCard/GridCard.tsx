@@ -1,5 +1,5 @@
 import ItemGrid from "./ItemGrid";
-import TitleDescription from "@/components/landing/.general/TitleDescription";
+import TitleDescription from "@/components/landing/general/TitleDescription";
 
 interface featureProps {
   img: string | JSX.Element;
@@ -26,8 +26,8 @@ export default function GridCard({
   return (
     <div className="bg-white py-10 sm:py-12">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex flex-col justify-center items-center mx-auto max-w-2xl text-center">
-          <div className="max-w-28 mb-3 text-sm font-medium leading-7 text-purpleButton bg-slate-50 border rounded-2xl text-center px-2">
+        <div className="flex flex-col justify-center items-center mx-auto max-w-3xl text-center px-1">
+          <div className="max-w-28 mb-3 text-sm font-medium leading-7 text-purpleText bg-slate-50 border rounded-2xl text-center px-2">
             {info}
           </div>
           <TitleDescription

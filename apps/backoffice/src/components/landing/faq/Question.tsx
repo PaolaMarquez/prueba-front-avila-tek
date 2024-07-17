@@ -19,9 +19,9 @@ export default function Question({ question, answer }: questionProps) {
           {question}
         </p>
         {isOpen ? (
-          <MinusCircleIcon className="w-6" />
+          <MinusCircleIcon className="w-6 text-gray-400" />
         ) : (
-          <PlusCircleIcon className="w-6" />
+          <PlusCircleIcon className="w-6 text-gray-400" />
         )}
       </div>
       {isOpen && <p className="pt-4 font-normal !text-gray-500">{answer}</p>}

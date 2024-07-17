@@ -54,7 +54,7 @@ export default function MenuItem({ name }: MenuItemProps) {
                 <div className="mt-1 flex flex-none justify-center rounded-lg bg-white group-hover:bg-gray-50">
                   <item.icon
                     aria-hidden="true"
-                    className="h-6 w-6 text-purpleButton"
+                    className="h-6 w-6 text-purpleText"
                   />
                 </div>
                 <div>
@@ -72,11 +72,7 @@ export default function MenuItem({ name }: MenuItemProps) {
           <div className="bg-gray-50 p-6 max-w-72">
             <div className="grid gap-y-2">
               <div className="pr-3 py-3">
-                <img
-                  className="rounded-md"
-                  //   src="https://i.pinimg.com/564x/08/eb/5d/08eb5d4ba4753d1b7e74d77a5e448679.jpg"
-                  src="MenuItem.png"
-                />
+                <img className="rounded-md" src="MenuItem.png" />
               </div>
               <p className="font-semibold text-base">
                 We've just release an update!
@@ -86,7 +82,7 @@ export default function MenuItem({ name }: MenuItemProps) {
               </p>
               <div className="flex gap-x-3 font-semibold text-sm">
                 <p className="text-gray-500">Dissmiss</p>
-                <p className="text-purpleButton">Changelog</p>
+                <p className="text-purpleText">Changelog</p>
               </div>
             </div>
           </div>

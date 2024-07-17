@@ -25,15 +25,13 @@ export default function ItemGrid({
           img
         )}
       </div>
-      <dt className="text-base font-semibold leading-7 text-gray-900">
-        {name}
-      </dt>
+      <dt className="text-lg font-semibold leading-7 text-gray-900">{name}</dt>
       <dd className="text-sm text-center leading-7 text-gray-600">
         {description}
       </dd>
       <a
         href={href}
-        className="flex gap-x-2 items-center font-medium text-sm text-purpleButton"
+        className="flex gap-x-2 items-center font-semibold text-sm text-purpleText"
       >
         {arrow}
         <ArrowRightIcon className="w-4" />

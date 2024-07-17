@@ -6,8 +6,8 @@ import { createRef, useEffect } from "react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
 
 import data from "./data.json";
-import TwoButtons from "../.general/TwoButtons";
-import TitleDescription from "../.general/TitleDescription";
+import TwoButtons from "../general/TwoButtons";
+import TitleDescription from "../general/TitleDescription";
 
 interface CustomArrowProps {
   onClick: () => void;
@@ -26,7 +26,7 @@ export default function MultiCarousel() {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 1,
+      items: 2,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -51,17 +51,17 @@ export default function MultiCarousel() {
   return (
     <div className="mx-10 lg:ml-28 mt-24">
       <div className="mb-14 text-center grid lg:flex lg:justify-between">
-        <div>
+        <div className="mb-4 lg:mb-0">
           <TitleDescription
             title={"Don't just take our word for it"}
             description={
               "Hear from some of our amazing customers who are automating their finances."
             }
-            classNameDesc="text-center sm:text-left"
-            classNameTitle="text-center sm:text-left"
+            classNameDesc="text-center lg:text-left"
+            classNameTitle="text-center lg:text-left"
           />
         </div>
-        <div className="lg:mr-24">
+        <div className="lg:mr-24 lg:flex lg:items-start -mt-8">
           <TwoButtons text1={"Our Customers"} text2={"Create account"} />
         </div>
       </div>

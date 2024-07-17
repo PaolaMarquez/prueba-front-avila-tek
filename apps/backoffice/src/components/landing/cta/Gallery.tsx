@@ -4,30 +4,26 @@ export default function Gallery() {
       <div className="max-w-96 flex justify-center gap-3 mx-auto">
         <ImageH
           src={
-            "https://images.unsplash.com/photo-1432462770865-65b70566d673?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            "https://i.pinimg.com/564x/ad/78/9d/ad789d630dc597fd0a9ffcc9ca16285c.jpg"
           }
           position="absolute bottom-0"
         />
         <ImageV
           src={
-            "https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80"
+            "https://i.pinimg.com/564x/c1/30/ec/c130ecbf5500cde4f85c713df0678f41.jpg"
           }
         />
       </div>
       <div className="flex gap-3">
-        <ImageH
-          src={
-            "https://images.unsplash.com/photo-1432462770865-65b70566d673?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-          }
-        />
+        <ImageH src={"MenuItem.png"} />
         <ImageV
           src={
-            "https://images.unsplash.com/photo-1629367494173-c78a56567877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80"
+            "https://i.pinimg.com/564x/9b/39/eb/9b39eb3646a5a9df5a8c797de52a36f4.jpg"
           }
         />
         <ImageH
           src={
-            "https://images.unsplash.com/photo-1432462770865-65b70566d673?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+            "https://www.asiagaa.com/wp-content/uploads/2021/04/evangeline-shaw-VLkoOabAxqw-unsplash.jpg"
           }
         />
       </div>

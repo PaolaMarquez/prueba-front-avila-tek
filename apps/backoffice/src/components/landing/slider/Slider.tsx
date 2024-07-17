@@ -55,7 +55,7 @@ export default function Slider() {
           return (
             <StarIcon
               key={i}
-              className={`w-4 ${s <= stars ? "text-yellow-300" : "bg-transparent"}`}
+              className={`w-5 ${s <= stars ? "text-[#fdb022]" : "bg-transparent text-purpleText"}`}
             />
           );
         })}
@@ -92,7 +92,7 @@ export default function Slider() {
               </div>
               <p className="text-sm">{slide.position}</p>
             </div>
-            <div className="flex top-4 justify-start pt-8 gap-x-3">
+            <div className="flex top-4 justify-start pt-8 gap-x-4">
               {slides.map((_, slideIndex) => (
                 <div
                   key={slideIndex}
@@ -100,7 +100,7 @@ export default function Slider() {
                   className="text-2xl cursor-pointer"
                 >
                   <div
-                    className={`${slideIndex === currentIndex ? "bg-white" : "bg-gray-300"} rounded-full w-2 h-2 hover:bg-white`}
+                    className={`${slideIndex === currentIndex ? "bg-white" : "bg-purpleText"} rounded-full w-2 h-2 hover:bg-white`}
                   />
                 </div>
               ))}

@@ -13,7 +13,7 @@ export default function TwoButtons({ text1, text2 }: Props) {
         children={<p>{text1}</p>}
       />
       <Button
-        className="bg-purpleButton hover:bg-hoverPurple text-white"
+        className="bg-purpleText hover:bg-hoverPurple text-white"
         children={<p>{text2}</p>}
       />
     </div>

@@ -1,6 +1,5 @@
-import TwoButtons from "@/components/landing/.general/TwoButtons";
-import TitleDescription from "../.general/TitleDescription";
-import Button from "@avila-tek/ui/button";
+import TwoButtons from "@/components/landing/general/TwoButtons";
+import TitleDescription from "../general/TitleDescription";
 
 interface Props {
   title: JSX.Element;
@@ -13,17 +12,17 @@ interface Props {
 export default function CTA({ title, desc, img, bg, gallery }: Props) {
   const isLight = bg.includes("bg-transparent");
   return (
-    <div className={`${isLight ? "bg-slate-50" : "bg-white"}`}>
-      <div className="mx-auto max-w-[76rem] py-16 sm:px-6 sm:py-10 lg:px-8">
+    <div className={`${isLight ? "bg-slate-50 py-16" : "bg-white"}`}>
+      <div className="mx-2 sm:mx-4 lg:mx-28 max-w-[76rem] py-16 sm:py-10">
         <div
-          className={`${bg} pt-16 sm:rounded-3xl lg:flex lg:justify-between lg:gap-x-10 lg:pl-16 lg:pt-0`}
+          className={`${bg} pt-16 sm:rounded-3xl lg:flex lg:justify-between lg:gap-x-10 lg:pt-0`}
         >
           <div className="mx-auto max-w-lg text-center lg:mx-0 lg:flex-auto lg:py-24 lg:text-left">
             <TitleDescription
               title={title}
               description={desc}
-              classNameTitle={`${isLight ? "text-black" : "text-white"}`}
-              classNameDesc={`text-center lg:text-left ${isLight ? "text-gray-500" : "text-gray-200"}`}
+              classNameTitle={`${isLight ? "text-black" : "text-white"} lg:text-[42px] lg:leading-normal`}
+              classNameDesc={`text-center lg:text-left ${isLight ? "text-gray-500" : "text-gray-100"}`}
             />
             <TwoButtons text1={"Learn more"} text2={"Get started"} />
           </div>
@@ -34,7 +33,7 @@ export default function CTA({ title, desc, img, bg, gallery }: Props) {
               className="w-full lg:w-[30rem] max-w-none lg:rounded-l-none rounded-b-3xl lg:rounded-r-3xl bg-white/5 ring-1 ring-white/10"
             />
           )}
-          {gallery}
+          {gallery && <div className="flex justify-center">{gallery}</div>}
         </div>
       </div>
     </div>

@@ -38,7 +38,7 @@ module.exports = {
       colors:{
         purple: "#53389e",
         hoverPurple: "#6941c6", 
-        purpleButton: "#7f56d9",
+        purpleText: "#7f56d9",
       }
     },
   },

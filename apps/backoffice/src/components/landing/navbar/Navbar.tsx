@@ -9,34 +9,27 @@ import {
 } from "@heroicons/react/24/outline";
 import Button from "@avila-tek/ui/button";
 import MenuItem from "./MenuItem";
-import Logo from "@/components/landing/.general/Logo";
-
-const navigation = [
-  { name: "Home", href: "#" },
-  {
-    name: "Products",
-    href: "#",
-    icon: <ChevronDownIcon className="w-4" />,
-  },
-  { name: "Resources", href: "#", icon: <ChevronDownIcon className="w-4" /> },
-  { name: "Pricing", href: "#" },
-];
-
-interface itemProps {
-  name: string;
-  href: string;
-  icon?: JSX.Element;
-}
+import Logo from "@/components/landing/general/Logo";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
+  const navigation = [
+    { name: "Home", href: "#" },
+    {
+      name: "Products",
+      href: "#",
+      icon: <ChevronDownIcon className="w-4" />,
+    },
+    { name: "Resources", href: "#", icon: <ChevronDownIcon className="w-4" /> },
+    { name: "Pricing", href: "#" },
+  ];
 
   return (
     <div className="bg-white">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
-          className="flex items-center justify-between p-6 lg:px-8"
+          className="flex items-center justify-between py-6 mx-2 sm:mx-4 lg:mx-28"
         >
           <div className={`w-full lg:w-fit flex justify-between items-center`}>
             <div className="flex lg:flex-1 ">
@@ -67,7 +60,7 @@ export default function Navbar() {
             />
             <Button
               children={<span>Sign up</span>}
-              className="bg-purpleButton text-white shadow-sm hover:bg-purple focus-visible:outline-purpleButton min-w-min"
+              className="bg-purpleText text-white shadow-sm hover:bg-purple focus-visible:outline-purpleText min-w-min"
             />
           </div>
         </nav>

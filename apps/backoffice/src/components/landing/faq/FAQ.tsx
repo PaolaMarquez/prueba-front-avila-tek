@@ -1,4 +1,4 @@
-import TitleDescription from "../.general/TitleDescription";
+import TitleDescription from "../general/TitleDescription";
 import Question from "./Question";
 
 const faqs = [
@@ -41,7 +41,7 @@ export default function FAQ() {
             classNameDesc="text-center"
           />
         </div>
-        <div className="max-w-3xl mx-auto grid gap-6">
+        <div className="max-w-3xl lg:max-w-2xl mx-auto grid gap-6">
           {faqs.map((q, i) => (
             <div key={i}>
               <Question question={q.question} answer={q.ans} />

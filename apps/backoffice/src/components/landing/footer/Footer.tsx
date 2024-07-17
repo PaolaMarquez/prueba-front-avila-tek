@@ -1,11 +1,11 @@
-import Logo from "../.general/Logo";
+import Logo from "../general/Logo";
 import data from "./data.json";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="relative w-full mt-32">
-      <div className="mx-3 lg:mx-auto w-full max-w-7xl px-8">
+    <footer className="relative mt-32 mx-2 pl-6 lg:pl-0 lg:mx-28">
+      <div className="w-full max-w-7xl">
         <div className="grid grid-cols-3 lg:grid-cols-6 justify-between gap-4 text-sm">
           {data.map(({ title, items }) => (
             <ul key={title} className="gap-y-12">
@@ -15,7 +15,7 @@ export default function Footer() {
                   {title !== "Get the app" ? (
                     <a
                       href="#"
-                      className="py-1.5 text-purpleButton font-medium transition-colors hover:text-gray-400"
+                      className="py-1.5 text-purpleText font-medium transition-colors hover:text-gray-400"
                     >
                       {link}
                     </a>
@@ -36,7 +36,7 @@ export default function Footer() {
               <Logo mobileMenuOpen={false} />
             </a>
           </div>
-          <p className="mb-4 text-center font-normal text-gray-500 md:mb-0">
+          <p className="mb-4 text-center font-normal text-gray-500 md:mb-0 text-sm">
             &copy; {currentYear} <a href="#">Untitled UI</a>. All Rights
             Reserved.
           </p>

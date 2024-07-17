@@ -116,18 +116,18 @@ export default function Home() {
         }
         desc={"Start your 30-day free trial today."}
         gallery={<Gallery />}
-        bg="bg-transparent items-center pl-6 md:pt-24"
+        bg="bg-transparent items-center md:pt-24"
       />
 
       <FAQ />
       <MultiCarousel />
       <CTA
-        title={<span>Give us a shot.</span>}
+        title={<span>Give us a shot</span>}
         desc={"Join over 4,000+ startups already growing with Untitled."}
         img={
           "https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
         }
-        bg="bg-purple rounded-3xl mx-2"
+        bg="bg-purple rounded-3xl mx-2 lg:pl-16"
       />
       <Footer />
     </>
