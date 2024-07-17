@@ -4,15 +4,17 @@ import Chart from "./charts/Chart";
 
 export default function EmailCTA() {
   return (
-    <div className="relative">
-      <div className="flex flex-col mt-24 bg-purple w-4xl rounded-2xl mx-20 justify-center items-center text-center gap-y-10 px-52 pt-20 pb-48">
-        <p className="text-7xl text-white font-bold">Grow your users.</p>
-        <p className="text-7xl text-gray-300 font-bold">Smarter.</p>
-        <p className="text-xl text-gray-300 font-medium">
+    <div className="relative mb-20 lg:mb-0">
+      <div className="flex flex-col mt-24 bg-purple w-4xl rounded-2xl mx-2 lg:mx-20 justify-center items-center text-center gap-y-10 px-5 lg:px-52 pt-20 pb-32 lg:pb-48">
+        <p className="text-5xl lg:text-7xl text-white font-bold">
+          Grow your users.
+        </p>
+        <p className="text-5xl lg:text-7xl text-gray-300 font-bold">Smarter.</p>
+        <p className="text-md lg:text-xl text-gray-300 font-medium">
           Powerful, self-serve product and growth analytics to help you convert,
           engage, and retain more users. Trusted by over 4,000 startups.
         </p>
-        <div className="w-7/12">
+        <div className="w-full lg:w-7/12">
           <div className="flex mt-2 gap-x-2">
             <div className="relative w-full">
               <input

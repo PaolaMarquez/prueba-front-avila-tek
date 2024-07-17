@@ -87,7 +87,6 @@ export default function Home() {
   return (
     <>
       <EmailCTA />
-      {/* <Chart /> */}
       <Card
         features={integrations}
         info={"Integrations"}
@@ -130,7 +129,6 @@ export default function Home() {
         }
         bg="bg-purple"
       />
-      {/* <Testimonials /> */}
       <Footer />
     </>
   );

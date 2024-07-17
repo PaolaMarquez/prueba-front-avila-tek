@@ -13,7 +13,7 @@ export default function CTA({ title, desc, img, bg, gallery }: Props) {
   const isLight = bg.includes("bg-transparent");
   return (
     <div className={isLight ? "bg-slate-50" : "bg-white"}>
-      <div className="mx-auto max-w-[76rem] py-24 sm:px-6 sm:py-32 lg:px-8">
+      <div className="mx-auto max-w-[76rem] py-16 sm:px-6 sm:py-32 lg:px-8">
         <div
           className={`${bg} pl-6 pt-16 sm:rounded-3xl sm:pl-10 md:pt-24 lg:flex lg:justify-between lg:gap-x-10 lg:pl-16 lg:pt-0`}
         >
@@ -28,7 +28,7 @@ export default function CTA({ title, desc, img, bg, gallery }: Props) {
             >
               {desc}
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+            <div className="mt-10 mb-10 flex items-center justify-center gap-x-6 lg:justify-start">
               <Button
                 className="bg-white hover:bg-gray-200 text-black border "
                 children={<p>Learn more</p>}
@@ -47,7 +47,6 @@ export default function CTA({ title, desc, img, bg, gallery }: Props) {
             />
           )}
           {gallery}
-          {/* <Gallery /> */}
         </div>
       </div>
     </div>

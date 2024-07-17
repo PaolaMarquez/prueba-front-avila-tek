@@ -46,8 +46,8 @@ export default function MultiCarousel() {
     </button>
   );
   return (
-    <div className="ml-28 my-10">
-      <div className="mb-14 text-left flex justify-between">
+    <div className="mx-10 lg:ml-28 my-10">
+      <div className="mb-14 text-center grid lg:text-left lg:flex lg:justify-between">
         <div>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Don't just take our word for it
@@ -57,7 +57,7 @@ export default function MultiCarousel() {
             finances.
           </p>
         </div>
-        <div className="mt-10 mr-24 flex items-center justify-center gap-x-6 lg:justify-start">
+        <div className="mt-10 lg:mr-24 flex items-center justify-center gap-x-6 lg:justify-start">
           <Button
             className="bg-white hover:bg-gray-200 text-gray-500 border "
             children={<p>Our Customers</p>}

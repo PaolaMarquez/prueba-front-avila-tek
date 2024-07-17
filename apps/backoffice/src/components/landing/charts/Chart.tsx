@@ -8,8 +8,8 @@ export default function Chart() {
         <div className="flex rounded-md shadow-lg p-8 w-11/12 h-96 text-base bg-white">
           <LineChart />
         </div>
-        <div className="absolute bottom-0 right-28 w-64 mr-4 mb-4 min-h-64 rounded-full bg-white"></div>
-        <div className="absolute bottom-0 right-28 w-min min-h-72 rounded-full">
+        <div className="absolute -bottom-28 lg:bottom-0 right-0 lg:right-28 w-64 mr-4 mb-4 min-h-64 rounded-full bg-white"></div>
+        <div className="absolute -bottom-28 lg:bottom-0 right-0 lg:right-28 w-min min-h-72 rounded-full">
           <DoughnutChart />
         </div>
       </div>

@@ -1,6 +1,6 @@
 export default function Gallery() {
   return (
-    <div className="max-w-xl pr-6 grid gap-3">
+    <div className="max-w-xl sm:pl-40 lg:pl-0 pr-6 grid gap-3">
       <div className="max-w-96 flex justify-center gap-3 mx-auto">
         <ImageH src={""} position="absolute bottom-0" />
         <ImageV src={""} />

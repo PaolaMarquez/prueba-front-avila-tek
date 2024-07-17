@@ -53,8 +53,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="relative w-full">
-      <div className="mx-auto w-full max-w-7xl px-8">
-        <div className="grid grid-cols-6 justify-between gap-4 text-sm">
+      <div className="mx-3 lg:mx-auto w-full max-w-7xl px-8">
+        <div className="grid grid-cols-3 lg:grid-cols-6 justify-between gap-4 text-sm">
           {links.map(({ title, items }) => (
             <ul key={title} className="gap-y-12">
               <p className="text-black mb-3 font-semibold">{title}</p>
@@ -68,7 +68,10 @@ export default function Footer() {
                       {link}
                     </a>
                   ) : (
-                    <img src={link} className="max-w-32 object-cover mb-0" />
+                    <img
+                      src={link}
+                      className="max-w-20 sm:max-w-32 object-cover mb-0"
+                    />
                   )}
                 </li>
               ))}

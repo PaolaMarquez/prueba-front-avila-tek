@@ -28,7 +28,7 @@ interface itemProps {
 }
 
 export default function Navbar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
   return (
     <div className="bg-white">
@@ -37,7 +37,7 @@ export default function Navbar() {
           aria-label="Global"
           className="flex items-center justify-between p-6 lg:px-8"
         >
-          <div className={`flex justify-between items-center`}>
+          <div className={`w-fit flex justify-between items-center`}>
             <div className="flex lg:flex-1">
               <a href="#" className="-m-1.5 p-1.5 flex items-center">
                 <img
@@ -100,7 +100,7 @@ export default function Navbar() {
                 className="-m-2.5 rounded-md p-2.5 text-gray-700"
               >
                 <span className="sr-only">Close menu</span>
-                <XMarkIcon aria-hidden="true" className="h-6 w-6" />
+                <XMarkIcon aria-hidden="true" className={`h-6 w-6`} />
               </button>
             </div>
             <div className="mt-6 flow-root">
@@ -117,13 +117,17 @@ export default function Navbar() {
                   ))}
                 </div>
                 <div className="py-6">
-                  {/* <Button children={undefined} appName={""} className="" /> */}
                   <a
                     href="#"
-                    // className="rounded-md bg-customColor px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-customColor"
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     Log in
+                  </a>
+                  <a
+                    href="#"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    Sign up
                   </a>
                 </div>
               </div>
