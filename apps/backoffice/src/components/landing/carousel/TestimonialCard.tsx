@@ -1,20 +1,8 @@
 import { StarIcon } from "@heroicons/react/24/solid";
 
-export default function Testimonials() {
+export default function TestimonialCard() {
   return (
-    <div>
-      <div className="flex gap-x-6 max-w-max">
-        <Card />
-        <Card />
-        <Card />
-      </div>
-    </div>
-  );
-}
-
-function Card() {
-  return (
-    <div className="relative h-96 w-72 flex justify-center">
+    <div className="relative h-[28rem] w-80 flex justify-center">
       <img
         className="h-full w-full absolute"
         src="https://i.pinimg.com/564x/fa/9c/4b/fa9c4bccfffa98a27009017c63c27d26.jpg"

@@ -39,7 +39,6 @@ export default function EmailCTA() {
       <div className="w-full top-4 right-4 z-50">
         <Chart />
       </div>
-      {/* <Chart /> */}
     </div>
   );
 }

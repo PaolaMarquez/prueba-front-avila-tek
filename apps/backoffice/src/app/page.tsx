@@ -1,6 +1,4 @@
 import Card from "@/components/landing/Card";
-import Navbar from "@/components/landing/Navbar";
-import Link from "next/link";
 import React from "react";
 import {
   ChatBubbleLeftIcon,
@@ -11,12 +9,10 @@ import Stats from "@/components/landing/Stats";
 import FAQ from "@/components/landing/FAQ";
 import CTA from "@/components/landing/CTA";
 import Gallery from "@/components/landing/Gallery";
-import Collage from "@/components/landing/Gallery";
-import Testimonials from "@/components/landing/Testimonials";
 import Slide from "@/components/landing/Slide";
 import Footer from "@/components/landing/Footer";
-import Chart from "@/components/landing/charts/Chart";
 import EmailCTA from "@/components/landing/EmailCTA";
+import MultiCarousel from "@/components/landing/carousel/Carousel";
 
 const integrations = [
   {
@@ -101,6 +97,7 @@ export default function Home() {
         }
         arrow={"View integration"}
       />
+      <Stats />
       <Card
         features={features}
         info={"Features"}
@@ -110,16 +107,7 @@ export default function Home() {
         }
         arrow={"Learn more"}
       />
-      <Stats />
-      <FAQ />
-      <CTA
-        title={<span>Give us a shot.</span>}
-        desc={"Join over 4,000+ startups already growing with Untitled."}
-        img={
-          "https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
-        }
-        bg="bg-purple"
-      />
+      <Slide />
       <CTA
         title={
           <span>
@@ -131,8 +119,18 @@ export default function Home() {
         gallery={<Gallery />}
         bg="bg-transparent items-center"
       />
-      <Testimonials />
-      <Slide />
+
+      <FAQ />
+      <MultiCarousel />
+      <CTA
+        title={<span>Give us a shot.</span>}
+        desc={"Join over 4,000+ startups already growing with Untitled."}
+        img={
+          "https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+        }
+        bg="bg-purple"
+      />
+      {/* <Testimonials /> */}
       <Footer />
     </>
   );
