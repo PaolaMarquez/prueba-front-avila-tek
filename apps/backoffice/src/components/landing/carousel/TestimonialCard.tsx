@@ -1,26 +1,51 @@
 import { StarIcon } from "@heroicons/react/24/solid";
 
-export default function TestimonialCard() {
+interface TestimonialProps {
+  name: string;
+  company: string;
+  position: string;
+  stars: number;
+  img: string;
+}
+
+interface Props {
+  testimonial: TestimonialProps;
+}
+
+export default function TestimonialCard({ testimonial }: Props) {
+  function showStars(stars: number) {
+    const options = [1, 2, 3, 4, 5];
+
+    return (
+      <div className="flex gap-x-1 justify-start">
+        {options.map((s, i) => {
+          return (
+            <StarIcon
+              key={i}
+              className={`w-4 ${s <= stars ? "text-white" : "text-transparent"}`}
+            />
+          );
+        })}
+      </div>
+    );
+  }
   return (
     <div className="relative h-[28rem] w-80 flex justify-center">
-      <img
-        className="h-full w-full absolute"
-        src="https://i.pinimg.com/564x/fa/9c/4b/fa9c4bccfffa98a27009017c63c27d26.jpg"
-      />
+      <img className="h-full w-full absolute" src={testimonial.img} />
       <div className="absolute w-64 max-h-max bottom-0 m-5 p-5 flex items-center border border-gray-200 backdrop-blur-md">
         <div className="">
-          <div className="flex gap-x-1">
-            <StarIcon className="w-4 text-white" />
-            <StarIcon className="w-4 text-white" />
-            <StarIcon className="w-4 text-white" />
-            <StarIcon className="w-4 text-white" />
-            <StarIcon className="w-4 text-white" />
-          </div>
-          <p className="text-white text-2xl font-semibold py-3">Alisa Hester</p>
-          <p className="text-white text-sm font-semibold pb-0.5">
-            PM, Hourglass
+          <h2 className="text-3xl font-[450] tracking-tight text-white sm:text-4xl">
+            <div className="grid justify-start gap-y-6">
+              {showStars(testimonial.stars)}
+            </div>
+          </h2>
+          <p className="text-white text-2xl font-semibold py-3">
+            {testimonial.name}
           </p>
-          <p className="text-white text-xs">Web Design Agency</p>
+          <p className="text-white text-sm font-semibold pb-0.5">
+            {testimonial.company}
+          </p>
+          <p className="text-white text-xs">{testimonial.position}</p>
         </div>
       </div>
     </div>

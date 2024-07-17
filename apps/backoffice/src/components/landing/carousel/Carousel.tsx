@@ -2,9 +2,12 @@
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import TestimonialCard from "./TestimonialCard";
-import { createRef } from "react";
+import { createRef, useEffect } from "react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
-import { Button } from "@avila-tek/ui/button";
+
+import data from "./data.json";
+import TwoButtons from "../.general/TwoButtons";
+import TitleDescription from "../.general/TitleDescription";
 
 interface CustomArrowProps {
   onClick: () => void;
@@ -23,7 +26,7 @@ export default function MultiCarousel() {
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      items: 1,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
@@ -36,7 +39,7 @@ export default function MultiCarousel() {
   const CustomArrow = ({ onClick, position }: CustomArrowProps) => (
     <button
       onClick={() => onClick()}
-      className={`bg-white hover:bg-gray-200 rounded-full absolute bottom-0 left-0 transform -translate-y-full border p-4 text-lg cursor-pointer ${position === "right" ? "ml-16" : ""}`}
+      className={`bg-white hover:bg-gray-200 rounded-full absolute bottom-0 left-0 transform -translate-y-full border p-4 text-lg cursor-pointer ${position === "right" ? "ml-20" : ""}`}
     >
       {position === "left" ? (
         <ArrowLeftIcon className="text-gray-600 w-5 h-5 rounded-full" />
@@ -46,26 +49,20 @@ export default function MultiCarousel() {
     </button>
   );
   return (
-    <div className="mx-10 lg:ml-28 my-10">
-      <div className="mb-14 text-center grid lg:text-left lg:flex lg:justify-between">
+    <div className="mx-10 lg:ml-28 mt-24">
+      <div className="mb-14 text-center grid lg:flex lg:justify-between">
         <div>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Don't just take our word for it
-          </p>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Hear from some of our amazing customers who are automating their
-            finances.
-          </p>
+          <TitleDescription
+            title={"Don't just take our word for it"}
+            description={
+              "Hear from some of our amazing customers who are automating their finances."
+            }
+            classNameDesc="text-center sm:text-left"
+            classNameTitle="text-center sm:text-left"
+          />
         </div>
-        <div className="mt-10 lg:mr-24 flex items-center justify-center gap-x-6 lg:justify-start">
-          <Button
-            className="bg-white hover:bg-gray-200 text-gray-500 border "
-            children={<p>Our Customers</p>}
-          />
-          <Button
-            className="bg-purpleButton hover:bg-purple text-white"
-            children={<p>Create account</p>}
-          />
+        <div className="lg:mr-24">
+          <TwoButtons text1={"Our Customers"} text2={"Create account"} />
         </div>
       </div>
       <Carousel
@@ -86,12 +83,9 @@ export default function MultiCarousel() {
           />
         }
       >
-        <TestimonialCard />
-        <TestimonialCard />
-        <TestimonialCard />
-        <TestimonialCard />
-        <TestimonialCard />
-        <TestimonialCard />
+        {data.map((testimonial, index) => {
+          return <TestimonialCard key={index} testimonial={testimonial} />;
+        })}
       </Carousel>
     </div>
   );

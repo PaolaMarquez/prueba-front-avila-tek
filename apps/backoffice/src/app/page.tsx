@@ -1,18 +1,18 @@
-import Card from "@/components/landing/Card";
 import React from "react";
 import {
   ChatBubbleLeftIcon,
   BoltIcon,
   DocumentChartBarIcon,
 } from "@heroicons/react/24/outline";
-import Stats from "@/components/landing/Stats";
-import FAQ from "@/components/landing/FAQ";
-import CTA from "@/components/landing/CTA";
-import Gallery from "@/components/landing/Gallery";
-import Slide from "@/components/landing/Slide";
-import Footer from "@/components/landing/Footer";
-import EmailCTA from "@/components/landing/EmailCTA";
+import Stats from "@/components/landing/stats/Stats";
+import FAQ from "@/components/landing/faq/FAQ";
+import CTA from "@/components/landing/cta/CTA";
+import Gallery from "@/components/landing/cta/Gallery";
 import MultiCarousel from "@/components/landing/carousel/Carousel";
+import Footer from "@/components/landing/footer/Footer";
+import EmailCTA from "@/components/landing/cta/EmailCTA";
+import Slider from "@/components/landing/slider/Slider";
+import GridCard from "@/components/landing/gridCard/GridCard";
 
 const integrations = [
   {
@@ -87,7 +87,7 @@ export default function Home() {
   return (
     <>
       <EmailCTA />
-      <Card
+      <GridCard
         features={integrations}
         info={"Integrations"}
         title={"Get more value from your tools"}
@@ -97,7 +97,7 @@ export default function Home() {
         arrow={"View integration"}
       />
       <Stats />
-      <Card
+      <GridCard
         features={features}
         info={"Features"}
         title={"Cutting-edge features for advanced analytics"}
@@ -106,7 +106,7 @@ export default function Home() {
         }
         arrow={"Learn more"}
       />
-      <Slide />
+      <Slider />
       <CTA
         title={
           <span>
@@ -116,7 +116,7 @@ export default function Home() {
         }
         desc={"Start your 30-day free trial today."}
         gallery={<Gallery />}
-        bg="bg-transparent items-center"
+        bg="bg-transparent items-center pl-6 md:pt-24"
       />
 
       <FAQ />
@@ -127,7 +127,7 @@ export default function Home() {
         img={
           "https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
         }
-        bg="bg-purple"
+        bg="bg-purple rounded-3xl mx-2"
       />
       <Footer />
     </>

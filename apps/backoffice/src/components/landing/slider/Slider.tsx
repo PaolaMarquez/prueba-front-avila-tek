@@ -10,7 +10,7 @@ interface CommentProps {
   img: string;
 }
 
-export default function Slide() {
+export default function Slider() {
   const slides: CommentProps[] = [
     {
       stars: 3,
@@ -31,7 +31,7 @@ export default function Slide() {
     {
       stars: 4,
       comment:
-        "Very satisfied with the service. It has been a valuable addition to our toolkit.",
+        "Very satisfied with the service. It has been a valuable addition to our toolkit. The best in the market.",
       name: "David Lee",
       position: "Lead Developer, NovaTech Solutions",
       img: "https://i.pinimg.com/564x/0d/e0/b5/0de0b585f1c78f7bb219080be08b357d.jpg",
@@ -50,12 +50,12 @@ export default function Slide() {
     const options = [1, 2, 3, 4, 5];
 
     return (
-      <div className="flex gap-x-1">
+      <div className="flex gap-x-1 justify-center lg:justify-start">
         {options.map((s, i) => {
           return (
             <StarIcon
               key={i}
-              className={`w-4 ${s < stars ? "text-yellow-300" : "bg-transparent"}`}
+              className={`w-4 ${s <= stars ? "text-yellow-300" : "bg-transparent"}`}
             />
           );
         })}
@@ -65,28 +65,30 @@ export default function Slide() {
 
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-[76rem] py-24 sm:px-6 sm:py-32 lg:px-8 relative group">
+      <div className="mx-auto max-w-[76rem] py-24 sm:px-6 sm:py-16 lg:px-8 relative group mt-16 mb-8">
         <div
           className={
-            "bg-purple lg:h-[22rem] pr-6 pt-16 sm:rounded-3xl sm:pr-8 md:pt-24 lg:flex lg:gap-x-12 lg:pt-0"
+            "bg-purple lg:h-[24rem] mx-2 sm:mx-6 md:mx-16 lg:mx-0 pt-0 rounded-xl sm:rounded-3xl sm:pr-0 md:pt-0 lg:flex lg:gap-x-12 lg:pt-0"
           }
         >
           <img
             alt="App screenshot"
             src={slide.img}
-            className="h-full max-w-[30rem] rounded-l-3xl bg-white/5 ring-1 ring-white/10"
+            className="h-auto sm:h-full sm:w-full lg:w-[29rem] rounded-t-xl lg:rounded-r-none lg:rounded-l-3xl bg-white/5 ring-1 ring-white/10"
           />
-          <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:flex-auto lg:py-8 lg:text-left">
-            <h2 className="text-3xl font-[450] tracking-tight text-white sm:text-4xl">
-              <div className="grid gap-y-6">
+          <div className="py-10 px-3 lg:px-3 lg:pr-28 flex flex-col items-center mx-auto max-w-2xl text-center lg:mx-0 lg:flex-auto lg:items-start lg:py-14 lg:text-left">
+            <h2 className="text-2xl font-[450] tracking-tight text-white sm:text-3xl">
+              <div className="grid justify-center gap-y-6">
                 {showStars(slide.stars)}
                 <p>{slide.comment}</p>
               </div>
             </h2>
             <div className="mt-6 text-lg leading-8 text-gray-300">
               <div className="font-bold text-white gap-x-2 flex">
-                <p>—</p>
-                <p>{slide.name}</p>
+                <p>
+                  {"— "}
+                  {slide.name}
+                </p>
               </div>
               <p className="text-sm">{slide.position}</p>
             </div>

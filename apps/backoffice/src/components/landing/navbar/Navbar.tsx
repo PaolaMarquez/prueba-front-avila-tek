@@ -7,8 +7,9 @@ import {
   XMarkIcon,
   ChevronDownIcon,
 } from "@heroicons/react/24/outline";
-import { Button } from "@avila-tek/ui/button";
+import Button from "@avila-tek/ui/button";
 import MenuItem from "./MenuItem";
+import Logo from "@/components/landing/.general/Logo";
 
 const navigation = [
   { name: "Home", href: "#" },
@@ -37,19 +38,10 @@ export default function Navbar() {
           aria-label="Global"
           className="flex items-center justify-between p-6 lg:px-8"
         >
-          <div className={`w-fit flex justify-between items-center`}>
-            <div className="flex lg:flex-1">
+          <div className={`w-full lg:w-fit flex justify-between items-center`}>
+            <div className="flex lg:flex-1 ">
               <a href="#" className="-m-1.5 p-1.5 flex items-center">
-                <img
-                  alt=""
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  className="h-8 w-auto"
-                />
-                {!mobileMenuOpen && (
-                  <span className="hidden md:flex pl-2 text-base font-medium leading-6 text-gray-900">
-                    Untitled UI
-                  </span>
-                )}
+                <Logo mobileMenuOpen={mobileMenuOpen} />
               </a>
             </div>
             <div className="flex lg:hidden">
@@ -71,11 +63,11 @@ export default function Navbar() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-x-2">
             <Button
               children={<span>Log in</span>}
-              className="bg-white text-black focus-visible:outline-white"
+              className="bg-white text-black focus-visible:outline-white min-w-min"
             />
             <Button
               children={<span>Sign up</span>}
-              className="bg-purpleButton text-white shadow-sm hover:bg-purple focus-visible:outline-purpleButton"
+              className="bg-purpleButton text-white shadow-sm hover:bg-purple focus-visible:outline-purpleButton min-w-min"
             />
           </div>
         </nav>

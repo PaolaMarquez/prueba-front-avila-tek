@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import { QueryProvider } from "@/context/query-context";
 import { NextAuthProvider } from "@/context/auth-provider";
-import Navbar from "@/components/landing/Navbar";
+import Navbar from "@/components/landing/navbar/Navbar";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
