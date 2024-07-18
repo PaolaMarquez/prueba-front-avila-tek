@@ -25,6 +25,7 @@
     "@tanstack/react-query-next-experimental": "^5.28.14",
     "@vercel/otel": "^1.8.1",
     "avilatek-utils": "^0.1.0",
+    "axios": "^1.7.2",
     "chart.js": "^4.4.3",
     "chartjs-plugin-annotation": "^3.0.1",
     "class-variance-authority": "^0.7.0",
