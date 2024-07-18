@@ -22,7 +22,7 @@ export default function CTA({ title, desc, img, bg, gallery }: Props) {
               title={title}
               description={desc}
               classNameTitle={`${isLight ? "text-black" : "text-white"} lg:text-[42px] lg:leading-normal`}
-              classNameDesc={`text-center lg:text-left ${isLight ? "text-gray-500" : "text-gray-100"}`}
+              classNameDesc={`text-center lg:text-left ${isLight ? "text-gray-500" : "text-gray-200"}`}
             />
             <TwoButtons text1={"Learn more"} text2={"Get started"} />
           </div>

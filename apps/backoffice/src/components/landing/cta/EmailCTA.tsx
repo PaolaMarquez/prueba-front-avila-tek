@@ -1,4 +1,4 @@
-import Button from "@avila-tek/ui/button";
+import Button from "@/components/landing/general/Button";
 import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
 import Chart from "../charts/Chart";
 

@@ -1,4 +1,4 @@
-import Button from "@avila-tek/ui/button";
+import Button from "@/components/landing/general/Button";
 
 interface Props {
   text1: string;

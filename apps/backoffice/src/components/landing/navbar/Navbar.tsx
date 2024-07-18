@@ -7,7 +7,7 @@ import {
   XMarkIcon,
   ChevronDownIcon,
 } from "@heroicons/react/24/outline";
-import Button from "@avila-tek/ui/button";
+import Button from "@/components/landing/general/Button";
 import MenuItem from "./MenuItem";
 import Logo from "@/components/landing/general/Logo";
 
