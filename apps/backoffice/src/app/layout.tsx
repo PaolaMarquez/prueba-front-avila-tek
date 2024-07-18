@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import { NextAuthProvider } from "@/context/auth-provider";
 import Navbar from "@/components/landing/navbar/Navbar";
+import { QueryProvider } from "@/context/query-context";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -25,12 +26,12 @@ export default function RootLayout({
           inter.variable
         )}
       >
-        {/* <QueryProvider> */}
-        {/* <NextAuthProvider> */}
-        <Navbar />
-        {children}
-        {/* </NextAuthProvider> */}
-        {/* </QueryProvider> */}
+        <QueryProvider>
+          {/* <NextAuthProvider> */}
+          <Navbar />
+          {children}
+          {/* </NextAuthProvider> */}
+        </QueryProvider>
       </body>
     </html>
   );
