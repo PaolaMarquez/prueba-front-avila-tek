@@ -13,6 +13,10 @@
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**"]
     },
+    "@avila-tek/api#build": {
+      "dependsOn": ["@avila-tek/models#build"],
+      "outputs": ["dist/**"]
+    },
     "@avila-tek/web#build": {
       "outputs": [".next/**", "!.next/cache/**"]
     },
