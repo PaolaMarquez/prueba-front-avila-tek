@@ -10,34 +10,34 @@ interface CommentProps {
   img: string;
 }
 
-export default function Slider() {
-  const slides: CommentProps[] = [
-    {
-      stars: 3,
-      comment:
-        "Good overall experience. Some minor improvements could enhance the user interface.",
-      name: "Michael Chang",
-      position: "Software Developer, CodeCrafters Ltd.",
-      img: "https://i.pinimg.com/564x/34/91/36/349136075087de85e93f5a0f137d1a7e.jpg",
-    },
-    {
-      stars: 5,
-      comment:
-        "Absolutely love the product! It has revolutionized our workflow and increased productivity.",
-      name: "Sophie Williams",
-      position: "CEO, TechGenius Solutions",
-      img: "https://i.pinimg.com/564x/69/85/86/69858644c3dc340c75af540b1b2ed3b8.jpg",
-    },
-    {
-      stars: 4,
-      comment:
-        "Very satisfied with the service. It has been a valuable addition to our toolkit. The best in the market.",
-      name: "David Lee",
-      position: "Lead Developer, NovaTech Solutions",
-      img: "https://i.pinimg.com/564x/0d/e0/b5/0de0b585f1c78f7bb219080be08b357d.jpg",
-    },
-  ];
+const slides: CommentProps[] = [
+  {
+    stars: 3,
+    comment:
+      "Good overall experience. Some minor improvements could enhance the user interface.",
+    name: "Michael Chang",
+    position: "Software Developer, CodeCrafters Ltd.",
+    img: "https://i.pinimg.com/564x/34/91/36/349136075087de85e93f5a0f137d1a7e.jpg",
+  },
+  {
+    stars: 5,
+    comment:
+      "Absolutely love the product! It has revolutionized our workflow and increased productivity.",
+    name: "Sophie Williams",
+    position: "CEO, TechGenius Solutions",
+    img: "https://i.pinimg.com/564x/69/85/86/69858644c3dc340c75af540b1b2ed3b8.jpg",
+  },
+  {
+    stars: 4,
+    comment:
+      "Very satisfied with the service. It has been a valuable addition to our toolkit. The best in the market.",
+    name: "David Lee",
+    position: "Lead Developer, NovaTech Solutions",
+    img: "https://i.pinimg.com/564x/0d/e0/b5/0de0b585f1c78f7bb219080be08b357d.jpg",
+  },
+];
 
+export default function Slider() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [slide, setSlide] = useState<CommentProps>(slides[currentIndex]!);
 

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import "./globals.css";
-import { QueryProvider } from "@/context/query-context";
 import { NextAuthProvider } from "@/context/auth-provider";
 import Navbar from "@/components/landing/navbar/Navbar";
 
@@ -26,12 +25,12 @@ export default function RootLayout({
           inter.variable
         )}
       >
-        <QueryProvider>
-          {/* <NextAuthProvider> */}
-          <Navbar />
-          {children}
-          {/* </NextAuthProvider> */}
-        </QueryProvider>
+        {/* <QueryProvider> */}
+        {/* <NextAuthProvider> */}
+        <Navbar />
+        {children}
+        {/* </NextAuthProvider> */}
+        {/* </QueryProvider> */}
       </body>
     </html>
   );
