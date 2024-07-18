@@ -34,8 +34,6 @@ export default function MultiCarousel() {
     },
   };
 
-  const carouselRef = createRef<Carousel>();
-
   const CustomArrow = ({ onClick, position }: CustomArrowProps) => (
     <button
       onClick={() => onClick()}
@@ -69,7 +67,6 @@ export default function MultiCarousel() {
         responsive={responsive}
         className="pb-32"
         infinite={true}
-        ref={carouselRef}
         customLeftArrow={
           <CustomArrow
             onClick={() => (Carousel as any).goToPrev()}
