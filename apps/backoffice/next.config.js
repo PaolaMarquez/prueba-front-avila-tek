@@ -1,6 +1,6 @@
 const nextConfig = {
   reactStrictMode: false,
-  output: 'standalone',
+  // output: 'standalone',
   transpilePackages: ['@avila-tek/ui', '@avila-tek/models'],
   experimental: {
     instrumentationHook: true,
