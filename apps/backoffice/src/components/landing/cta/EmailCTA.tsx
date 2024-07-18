@@ -1,6 +1,6 @@
 import Button from "@avila-tek/ui/button";
 import { QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
-import Chart from "../charts/Chart";
+// import Chart from "../charts/Chart";
 
 export default function EmailCTA() {
   return (
@@ -40,9 +40,9 @@ export default function EmailCTA() {
           </a>
         </div>
       </div>
-      <div className="w-full top-4 right-4 z-50">
+      {/* <div className="w-full top-4 right-4 z-50">
         <Chart />
-      </div>
+      </div> */}
     </div>
   );
 }

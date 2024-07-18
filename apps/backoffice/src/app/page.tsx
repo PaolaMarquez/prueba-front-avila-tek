@@ -8,7 +8,7 @@ import Stats from "@/components/landing/stats/Stats";
 import FAQ from "@/components/landing/faq/FAQ";
 import CTA from "@/components/landing/cta/CTA";
 import Gallery from "@/components/landing/cta/Gallery";
-import MultiCarousel from "@/components/landing/carousel/Carousel";
+// import MultiCarousel from "@/components/landing/carousel/Carousel";
 import Footer from "@/components/landing/footer/Footer";
 import EmailCTA from "@/components/landing/cta/EmailCTA";
 import Slider from "@/components/landing/slider/Slider";
@@ -120,7 +120,7 @@ export default function Home() {
       />
 
       <FAQ />
-      <MultiCarousel />
+      {/* <MultiCarousel /> */}
       <CTA
         title={<span>Give us a shot</span>}
         desc={"Join over 4,000+ startups already growing with Untitled."}
