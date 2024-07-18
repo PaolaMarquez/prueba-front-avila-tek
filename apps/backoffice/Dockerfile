@@ -38,7 +38,7 @@ RUN npm ci --no-audit
 COPY --from=builder /app/out/full/ .
 COPY turbo.json turbo.json
 
-RUN npx turbo run build --scope=${SCOPE} --filter=${SCOPE}...
+RUN npx turbo run build --filter=${SCOPE}...
 
 FROM base AS runner
 WORKDIR /app
